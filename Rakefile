@@ -6,7 +6,7 @@ end
 desc "Run tests"
 
 task :main do
-  ruby "main.rb"
+  require_relative("main")
 end
 
-task default: :test
+task default: :main
