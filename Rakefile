@@ -5,4 +5,8 @@ Rake::TestTask.new do |t|
 end
 desc "Run tests"
 
+task :main do
+  ruby "main.rb"
+end
+
 task default: :test
