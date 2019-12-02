@@ -1,6 +1,6 @@
 require "benchmark"
 
-SOLVED_DAYS = (1..1).freeze
+SOLVED_DAYS = (1..2).freeze
 
 SOLVED_DAYS.each do |day|
   require_relative "day_#{day}/solution"
@@ -17,7 +17,7 @@ Benchmark.bm do |benchmark|
       
       klass = Object.const_get("Day#{day}")
       benchmark.report do
-        input = File.readlines("day_#{day}/input.txt")
+        input = File.read("day_#{day}/input.txt")
         solution = klass.send("problem_#{problem}", input)
       end
       

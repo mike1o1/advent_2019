@@ -1,6 +1,7 @@
 module Day1
   def self.problem_1(modules)
     modules
+      .split("\n")
       .map(&:to_i)
       .map(&method(:calculate_fuel))
       .reduce(:+)
@@ -9,7 +10,7 @@ module Day1
   def self.problem_2(modules)
     fuel = 0
 
-    modules.map(&:to_i).each do |mass|
+    modules.split("\n").map(&:to_i).each do |mass|
       while mass > 0
         mass = mass / 3 - 2
 
