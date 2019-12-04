@@ -17,7 +17,6 @@ module Day3
     intersections = trace_wire(first_path) & trace_wire(second_path)
 
     step_counts = intersections.map do |x, y|
-      # count how many steps were taken
       first_steps = trace_wire_steps(first_path, x, y)
       second_steps = trace_wire_steps(second_path, x, y)
 
@@ -63,9 +62,8 @@ module Day3
 
       steps = 0
 
-      # Go through the inputs until we meet the first intersection
+      # Go through the inputs until we meet the intersection point
       # and count how many steps were taken
-
       inputs.split(",").each do |input|
         operation = input[0]
         count = input[1..].to_i
