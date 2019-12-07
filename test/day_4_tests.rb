@@ -4,9 +4,9 @@ require_relative("../day_4/solution")
 class Day4Tests < Minitest::Test
 
   def test_day_4_solution_1_examples
-    assert_equal(true, Day4.meets_criteria?("111111"))
-    assert_equal(false, Day4.meets_criteria?("223450"))
-    assert_equal(false, Day4.meets_criteria?("123789"))
+    assert_equal(true, Day4.meets_criteria?(111111))
+    assert_equal(false, Day4.meets_criteria?(223450))
+    assert_equal(false, Day4.meets_criteria?(123789))
   end
 
   def test_day_4_solution_1_ranges
@@ -14,9 +14,9 @@ class Day4Tests < Minitest::Test
   end
 
   def test_day_4_solution_2_examples
-    assert_equal(true, Day4.meets_new_criteria?("112233"))
-    assert_equal(false, Day4.meets_new_criteria?("123444"))
-    assert_equal(true, Day4.meets_new_criteria?("111122"))
+    assert_equal(true, Day4.meets_new_criteria?(112233))
+    assert_equal(false, Day4.meets_new_criteria?(123444))
+    assert_equal(true, Day4.meets_new_criteria?(111122))
   end
 
 end
